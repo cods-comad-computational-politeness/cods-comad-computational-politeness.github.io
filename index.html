@@ -250,13 +250,47 @@
             </p></li>
             <li><b>Need and Challenges of Knowledge-enhanced Response Generation in Dialogues (15 minutes)</b>
             <p>
-              
+              An effective dialogue system should be able to generate coherent, contextually relevant, user-centric, and informative responses. To achieve this, these systems require diverse information sources, including textual and structured data from external sources, user attributes (like sentiment, emotions, politeness, personal profile information - age, gender, persona, etc.), and contextual information (Wang et al., 2023a). Integrating the knowledge into the generated responses poses challenges concerning the retrieval or selection of pertinent knowledge and effective comprehension and utilization of the acquired knowledge to facilitate response generation (Wang et al., 2023b). In this section, we will discuss how the varied knowledge resources enhance response generation and improve the interpretability of dialogue systems by incorporating explicit semantics. Subsequently, we will address the challenges inherent in knowledge-enhanced response generation within dialogue systems.
             </p></li>
-            <li><b>Internal Knowledge-enhanced Response Generation in Dialogue Systems (60 minutes)</b></li>
-            <li><b>External Knowledge-enhanced Response Generation in Dialogue Systems (60 minutes)</b></li>
-            <li><b>Knowledge-grounded Dialogue Systems in Healthcare (20 minutes)</b></li>
-            <li><b>Hands-on Session (50 minutes)</b></li>
-            <li><b>Conclusion and Future Perspectives</b></li>
+            <li><b>Internal Knowledge-enhanced Response Generation in Dialogue Systems (60 minutes)</b>
+            <p>
+              In this part of the tutorial, we aim to delineate the internal knowledge-enhanced response generation methods and applications. The information from internal knowledge sources helps enlighten and drive the generated responses to be informative and avoids generating universally relevant replies with little semantics. The internal knowledge can be obtained from topical information, keywords, and internal graph structures. We will point out the works that incorporate these knowledge sources for response generation.
+
+<b>(i) Response enhanced by Topic:</b> A dialogue system frequently employing responses such as “I don’t know”, “Okay” “I see” may appear repetitive and uninformative. While these off-topic replies are generally harmless for addressing various inquiries, they lack engagement and are likely to prematurely conclude conversations, significantly diminishing the overall user experience (Xing et al., 2017; Ahmad et al., 2023). Consequently, there is a pressing demand for on-topic response generation. This part of the tutorial delves into the works that have incorporated topical knowledge to guide the informative response generation (Xing et al., 2017; Xu et al., 2020).
+
+<b>(ii) Response enhanced by Keywords:</b> Recent research has incorporated personalized data into the dialogue generation process to enhance the quality of dialogue responses, particularly concerning emotional aspects, viz. emotion (Rashkin et al., 2019), sentiment (Chen and Nakamura, 2021), and politeness (Mishra et al., 2022b; Wang et al., 2020). We will discuss the works that attempt to integrate emotion (Zhou et al., 2018a; Firdaus et al., 2021a; Madasu et al., 2022; Majumder et al., 2022; Mishra et al., 2022c; Samad et al., 2022), sentiment (Firdaus et al., 2021b, 2022a), politeness (Golchha et al., 2019; Firdaus et al., 2020c; Mishra et al., 2022a; Firdaus et al., 2022a; Mishra et al., 2023a,c,b; Priya et al., 2023b), and intent (Xie and Pu, 2021) into the generated responses to make them personalized and engaging.
+
+<b>(iii) Response enhanced by Internal Knowledge Graph:</b> Internal knowledge graphs are valuable for comprehending lengthy input sequences. They serve as intermediaries to consolidate or eliminate redundant data, resulting in a concise representation of the input document (Fan et al., 2019; Priya et al., 2023a). Furthermore, KG representations enable the creation of structured summaries and emphasize the connections between related concepts, particularly in cases where complex events associated with a single entity extend across multiple sentences (Huang et al., 2020). In this part of the tutorial, we will present works integrating an internal knowledge graph to enhance response generation capabilities (Liang et al., 2022; Firdaus et al., 2020e).
+            </p></li>
+            <li><b>External Knowledge-enhanced Response Generation in Dialogue Systems (60 minutes)</b>
+            <p><b>(i) Persona Information:</b> Research focused on personas in dialogue systems requires that the agent adopts a specific character when engaging with users. This persona is closely linked to personality, which influences the emotional and personal aspects of users. In this section of the tutorial, we discuss studies that have employed persona-aware techniques to enhance the efficacy of response generation in dialogue systems (Firdaus et al., 2020f; Saha and Ananiadou, 2022; Firdaus et al., 2022d,b; Zhong et al., 2022). Findings from these studies suggest that persona information drives empathetic and personalized conversations more than non-empathetic ones.
+
+<b>(ii) Multimodal Information:</b> Lately, the utilization of multimodal information has witnessed a surge in popularity in the field of dialogue systems. This approach is instrumental in comprehensively understanding users’ emotional and mental states, as it leverages textual and non-textual attributes (Firdaus et al., 2023). In this part of the tutorial, we aim to discuss several notable studies in the literature that have harnessed multimodal data to enhance response generation within dialogue systems (Tavabi et al., 2019; Firdaus et al., 2020a, 2022c).
+
+<b>(iii) External Knowledge Bases:</b> Knowledge-grounded systems utilize external resources such as Wikipedia documents to enhance response generation. Dinan et al. (2018) released the first Wikipedia knowledge-grounded conversation dataset. Varshney et al. (2023a) utilized the knowledge on various topics such as politics, and movies using the Topical Chat (Gopalakrishnan et al., 2019) and CMU_DoG (Zhou et al., 2018c) dataset to propose a knowledge-emotion enabled conversational model. Lin et al. (2020) introduced a model that combined knowledge decoders with a pointer network to effectively handle out-of-vocabulary words. Experts suggest converting unstructured knowledge into organized knowledge graphs, composed of triplets (entity, relation, entity/item). Models, such as CCM, retrieve subgraphs from these graphs, especially using knowledge bases like ConceptNet (Speer and Havasi, 2012), and employ attention mechanisms to blend this knowledge into conversations (Zhou et al., 2018b). Concept Flow expands this by including extended subgraph ranges, integrating knowledge from two sources (Zhang et al., 2019). Varshney et al. (2022a) utilizes both knowledge graphs and Wikipedia documents with a coreference-based knowledge graph augmenting method to improve factual accuracy in dialogue systems.</p></li>
+            <li><b>Knowledge-grounded Dialogue Systems in Healthcare (20 minutes)</b>
+            <p>
+              In healthcare, background knowledge is vital in understanding an individual’s medical history, mental condition, symptoms, and treatment plan. Research has shown that integrating comprehensive knowledge resources in healthcare dialogue systems offers several key advantages, such as enhancing the system’s grasp of medical concepts and terminology, empowering the system with reasoning and inference capabilities, comprehending emotional dynamics in conversations, and identifying useful response patterns leading to emotional relief (Varshney et al., 2022b; Liang et al., 2021). Driven by these considerations, in this tutorial session, we will discuss the studies that infuse external knowledge in healthcare dialogue systems for providing personalized and effective support (Shen et al., 2022; Deng et al., 2023; Varshney et al., 2022c, 2023b,c; Liu et al., 2021).
+            </p></li>
+            <li><b>Hands-on Session (50 minutes)</b>
+            <p>
+              1. Setting up a basic knowledge-enhanced dialogue system for the healthcare domain (Varshney et al., 2023c,b).
+              2. Integrating a sample knowledge base (e.g., Unified Medical Language System).
+              3. Evaluating the performance of the dialogue using automated metrics such as BLEU, F1, and embedding-based metrics.
+
+            </p></li>
+            <li><b>Conclusion and Future Perspectives</b>
+            <p>
+              This tutorial explores notable studies on knowledge-enhanced dialogue generation, showcasing how leveraging diverse information sources can enhance dialogue model efficacy. Despite advancements, several challenges remain, highlighting exciting future research avenues. We’ll delve into four key research directions:
+
+(i) Knowledge Acquisition from Pre-trained Language Models: Pre-trained models harbor vast implicit knowledge without external memory reliance (Lewis et al., 2020), opening avenues for efficient knowledge extraction methods like knowledge distillation, data augmentation using pre-trained models as knowledge sources (Petroni et al., 2019), and prompting of language models (Li and Liang, 2021).
+
+(ii) Knowledge Acquisition from Limited Resources: In real-world scenarios, new domains often have scarce examples, necessitating rapid adaptation of knowledge-enhanced dialogue models via efficient meta-learning algorithms that minimize task-specific fine-tuning.
+
+(iii) Continuous Knowledge Acquisition: A noteworthy exploration is done in (Mazumder et al., 2018), where authors devised a knowledge acquisition engine for chatbots, enabling continuous learning from diverse information sources during interactions.
+
+(iv) Leveraging Emotional Knowledge through External Sources: Utilizing emotional knowledge bases like SenticNet aids in discerning user emotional states and background, thus generating emotionally coherent responses, crucial in healthcare and social good applications like persuasion and negotiation.
+            </p></li>
               </ul>
         </div>
       </div>
